@@ -1,5 +1,4 @@
 ---
-chdir: /home/akemrir/projekty/sinatra/jgzlotnictwo.pl
 environment: development
 address: 0.0.0.0
 port: 7120
