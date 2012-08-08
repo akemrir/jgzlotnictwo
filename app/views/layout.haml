@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %link{:type => 'text/css', :rel => 'stylesheet', :href => '/css/style.css'}
+    %script{:type => 'text/javascript', :src => '/js/jquery-1.7.2.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/coin-slider.min2.js'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :href => '/css/coin-slider-styles.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :href => '/css/colorbox.css'}
+    %script{:type => 'text/javascript', :src => '/js/jquery.colorbox.js'}
+    %title JG Złotnictwo 0.99v
+  %body
+    .container_4
+      .main
+        #header.grid_4
+          #logo
+            %img{:src => "logo.png"}
+          #menu
+            - menu_pos "glowna", "Główna"
+            - menu_pos "galeria", "Galeria"
+            - menu_pos "dojazd", "Dojazd"
+
+        - flash.each do |key, msg|
+          %div{:class => "flash #{key}"}
+            = msg
+
+        = yield
+
+        #footer
+
+          %h5
+            = %Q'Copyright #{Time.now.year} © JG Złotnictwo :: Napisz do Nas - '
+            %a{ :href => "mailto://jg.zlotnictwo@gmail.com" }jg.zlotnictwo@gmail.com

@@ -1,0 +1,15 @@
+---
+chdir: /home/akemrir/projekty/sinatra/jgzlotnictwo.pl
+environment: development
+address: 0.0.0.0
+port: 7120
+timeout: 30
+log: log/thin.log
+pid: tmp/pids/thin.pid
+max_conns: 1024
+max_persistent_conns: 512
+require: []
+wait: 30
+adapter: rack
+rackup: config.ru
+daemonize: true

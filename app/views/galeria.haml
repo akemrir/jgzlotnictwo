@@ -1,0 +1,13 @@
+#galeria
+  - @gallery["images"].each do |k,v|
+    %h6.name.w920= k
+    .group.grid_4
+      - v["images"].each do |article|
+        %a{:class => k, :href => article["prev"]}
+          %img{:src => article["mini"]}
+
+%script(type="text/javascript")
+  $(document).ready(function(){
+  - @gallery["images"].each do |k,v|
+    $(".#{k}").colorbox({rel:"#{k}"});
+  });

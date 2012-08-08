@@ -1,0 +1,28 @@
+#articles
+  - @slides["images"].each do |slide|
+    %a{:href => "#", :target => "_blank"}
+      %img{:src => slide["prev"]}
+
+.info
+  .grid_1
+    %h4 Usługi dla CIEBIE
+    %p Wszystkie nasze wyroby wykonujemy ręcznie, co sprawia, że są one niepowtarzalne i gwarantują wysoką jakość.
+  .grid_1
+    %h4 Wyrób biżuterii na zamówienie
+    %p Projektujemy i wykonujemy biżuterię z metali szlachetnych według własnych wzorów lub klienta.
+  .grid_1
+    %h4 Naprawę biżuterii złotej i srebrnej
+    %p Zajmujemy się renowacją, naprawą i oczyszczaniem biżuterii złotej oraz srebrnej.
+  .grid_1
+    %h4 Realizacja zamówień nietypowych
+    %p Zajmujemy się wyrobem niepowtarzalnej srebrnej biżuterii artystycznej oraz przedmiotów upominkowych.
+
+:javascript
+  $(document).ready(function() {
+    $('#articles').coinslider({
+    width: 960,
+    links: false,
+    navigation: false,
+    delay: 5000
+    });
+  });
